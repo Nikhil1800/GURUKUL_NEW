@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>संपर्क | Gurukul Parivar Pune</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Yatra+One&family=Tiro+Devanagari+Marathi:ital@0;1&family=Poppins:wght@300;400;500;600&family=Noto+Sans+Devanagari:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .contact-wrap{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:50px;}
+  .contact-form-card{background:var(--ivory-soft);border:1px solid rgba(92,26,27,0.14);border-radius:10px;padding:34px;}
+  .contact-form-card h3{font-family:'Tiro Devanagari Marathi',serif;font-size:20px;color:var(--maroon-dark);margin-bottom:8px;}
+  .contact-form-card .sub{font-size:13.5px;color:var(--ink);opacity:0.7;margin-bottom:24px;line-height:1.7;}
+  .field{margin-bottom:16px;}
+  .field label{display:block;font-size:12.5px;color:var(--ink);opacity:0.75;margin-bottom:6px;font-weight:500;}
+  .field input, .field textarea{
+    width:100%;padding:11px 14px;border:1px solid rgba(92,26,27,0.25);
+    border-radius:8px;background:var(--ivory);font-family:inherit;font-size:14px;color:var(--ink);
+  }
+  .field textarea{resize:vertical;min-height:100px;}
+  .field input:focus, .field textarea:focus{outline:none;border-color:var(--turmeric);}
+  .submit-btn{
+    background:var(--maroon);color:var(--ivory);border:none;
+    padding:12px 30px;border-radius:30px;font-size:14px;font-weight:600;cursor:pointer;
+    transition:background .2s;
+  }
+  .submit-btn:hover{background:var(--turmeric);color:var(--maroon-dark);}
+
+  .info-card{background:var(--maroon);color:var(--ivory);border-radius:10px;padding:34px;margin-bottom:24px;}
+  .info-card h3{font-family:'Tiro Devanagari Marathi',serif;font-size:20px;color:var(--turmeric);margin-bottom:18px;}
+  .info-row{display:flex;gap:12px;margin-bottom:16px;font-size:14px;line-height:1.7;color:rgba(246,238,221,0.9);}
+  .info-row .lbl{color:var(--turmeric);font-weight:600;min-width:70px;}
+  .map-frame{border-radius:10px;overflow:hidden;border:1px solid rgba(92,26,27,0.14);height:240px;}
+  .map-frame iframe{width:100%;height:100%;border:0;}
+
+  @media (max-width:900px){
+    .contact-wrap{grid-template-columns:1fr;}
+    .footer-grid{grid-template-columns:1fr 1fr;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo-wrap">
+    <div class="logo-mark">गु</div>
+    <div class="logo-text">गुरुकुल परिवार<span>GURUKUL PARIVAR · PUNE</span></div>
+  </a>
+  <nav>
+    <a href="index.html">मुख्यपृष्ठ</a>
+    <a href="about.html">परिचय</a>
+    <a href="events.html">उपक्रम</a>
+    <a href="contact.html" class="active">संपर्क</a>
+  </nav>
+  <a href="contact.html" class="cta-btn">भेटीची वेळ</a>
+</header>
+
+<section class="page-hero">
+  <div class="crumb">मुख्यपृष्ठ / संपर्क</div>
+  <h1>आमच्याशी संपर्क साधा</h1>
+</section>
+<div class="garland"></div>
+
+<section>
+  <div class="contact-wrap">
+    <div class="contact-form-card">
+      <h3>आम्हाला संदेश पाठवा</h3>
+      <p class="sub">आपल्याला कोणतेही प्रश्न असल्यास किंवा मदत हवी असल्यास, खालील फॉर्म भरा — आम्ही लवकरच आपल्याशी संपर्क करू.</p>
+      <form onsubmit="event.preventDefault(); this.querySelector('.submit-btn').textContent='पाठवले ✓';">
+        <div class="field"><label>संपूर्ण नाव</label><input type="text" placeholder="आपले नाव" required></div>
+        <div class="field"><label>ईमेल</label><input type="email" placeholder="you@example.com" required></div>
+        <div class="field"><label>फोन नंबर</label><input type="tel" placeholder="+91"></div>
+        <div class="field"><label>संदेश</label><textarea placeholder="आपला संदेश येथे लिहा..." required></textarea></div>
+        <button type="submit" class="submit-btn">संदेश पाठवा</button>
+      </form>
+    </div>
+    <div>
+      <div class="info-card">
+        <h3>संपर्क तपशील</h3>
+        <div class="info-row"><span class="lbl">पत्ता</span><span>५५७, बुधवार पेठ, अस्मिता अपार्टमेंट, पुणे - ४११००२</span></div>
+        <div class="info-row"><span class="lbl">फोन</span><span>+91 98508 96493</span></div>
+        <div class="info-row"><span class="lbl">ईमेल</span><span>gurukulpariwar1984@gmail.com</span></div>
+      </div>
+      <div class="map-frame">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.2432967206805!2d73.8584786!3d18.5179045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c100225518ff%3A0x27208738dee369d8!2sAsmita%20Apartment!5e0!3m2!1sen!2sin!4v1766332782440!5m2!1sen!2sin" loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="garland light" style="background-color:var(--maroon-dark);"></div>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="logo-wrap" style="margin-bottom:14px;">
+        <div class="logo-mark">गु</div>
+        <div class="logo-text" style="color:var(--ivory);">गुरुकुल परिवार<span style="color:var(--turmeric);">GURUKUL PARIVAR · PUNE</span></div>
+      </div>
+      <p>श्रद्धा, प्रेम, आदर आणि विश्वास या मूल्यांवर आधारित गुरुकुल विद्यार्थ्यांच्या सर्वांगीण विकासासाठी कटिबद्ध आहे.</p>
+    </div>
+    <div>
+      <h5>पत्ता</h5>
+      <p>५५७, बुधवार पेठ,<br>अस्मिता अपार्टमेंट,<br>पुणे - ४११००२</p>
+    </div>
+    <div>
+      <h5>संपर्क</h5>
+      <ul>
+        <li>+91 98508 96493</li>
+        <li>gurukulpariwar1984@gmail.com</li>
+      </ul>
+    </div>
+    <div>
+      <h5>द्रुत दुवे</h5>
+      <ul>
+        <li><a href="index.html">मुख्यपृष्ठ</a></li>
+        <li><a href="about.html">परिचय</a></li>
+        <li><a href="events.html">उपक्रम</a></li>
+        <li><a href="contact.html">संपर्क</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>आमच्यासह जोडा</h5>
+      <div class="social-links">
+        <a href="https://www.facebook.com/profile.php?id=100006376236905" target="_blank" rel="noopener" title="Facebook">f</a>
+        <a href="https://www.instagram.com/pariwargurukul/" target="_blank" rel="noopener" title="Instagram">📷</a>
+        <a href="https://www.youtube.com/@gurukulpariwarpune5432" target="_blank" rel="noopener" title="YouTube">▶</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 गुरुकुल परिवार, पुणे</span>
+    <span>Facebook · Instagram · YouTube</span>
+  </div>
+</footer>
+
+  <script src="site.js"></script>
+</body>
+</html>

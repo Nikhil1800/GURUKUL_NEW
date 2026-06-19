@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>परिचय | Gurukul Parivar Pune</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Yatra+One&family=Tiro+Devanagari+Marathi:ital@0;1&family=Poppins:wght@300;400;500;600&family=Noto+Sans+Devanagari:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .timeline{max-width:760px;margin:0 auto;}
+  .timeline-item{display:grid;grid-template-columns:90px 1fr;gap:24px;padding:0 0 36px;position:relative;}
+  .timeline-item::before{
+    content:"";position:absolute;left:103px;top:30px;bottom:-6px;width:1px;
+    background:rgba(92,26,27,0.2);
+  }
+  .timeline-item:last-child::before{display:none;}
+  .timeline-yr{font-family:'Tiro Devanagari Marathi',serif;font-size:20px;color:var(--maroon);font-weight:500;}
+  .timeline-body{background:var(--ivory-soft);border:1px solid rgba(92,26,27,0.14);border-radius:10px;padding:18px 22px;}
+  .timeline-body p{font-size:14px;line-height:1.8;color:var(--ink);opacity:0.85;}
+
+  .founder-block{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:0.85fr 1.15fr;gap:50px;align-items:center;}
+  .founder-img{aspect-ratio:1/1;border-radius:10px;background:linear-gradient(160deg, var(--maroon) 0%, var(--maroon-dark) 100%);display:flex;align-items:center;justify-content:center;color:var(--turmeric);font-size:13px;text-align:center;padding:24px;position:relative;}
+  .founder-img::after{content:"";position:absolute;inset:14px;border:1px solid rgba(217,142,43,0.5);border-radius:6px;}
+  .founder-copy h3{font-family:'Tiro Devanagari Marathi',serif;font-size:24px;color:var(--maroon-dark);margin-bottom:14px;}
+  .founder-copy p{font-size:15px;line-height:1.85;color:var(--ink);opacity:0.85;}
+
+  .opening-block{
+    background:var(--ivory-soft);border:1px solid rgba(92,26,27,0.14);border-radius:10px;
+    max-width:780px;margin:0 auto;padding:34px 36px;text-align:center;
+  }
+  .opening-block p{font-size:14.5px;line-height:1.9;color:var(--ink);opacity:0.85;}
+  .opening-block .tag{font-size:12px;letter-spacing:2px;color:var(--sage);text-transform:uppercase;font-weight:600;margin-bottom:12px;}
+
+  @media (max-width:900px){
+    .founder-block{grid-template-columns:1fr;}
+    .timeline-item{grid-template-columns:1fr;}
+    .timeline-item::before{display:none;}
+    .footer-grid{grid-template-columns:1fr 1fr;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo-wrap">
+    <div class="logo-mark">गु</div>
+    <div class="logo-text">गुरुकुल परिवार<span>GURUKUL PARIVAR · PUNE</span></div>
+  </a>
+  <nav>
+    <a href="index.html">मुख्यपृष्ठ</a>
+    <a href="about.html" class="active">परिचय</a>
+    <a href="events.html">उपक्रम</a>
+    <a href="contact.html">संपर्क</a>
+  </nav>
+  <a href="contact.html" class="cta-btn">भेटीची वेळ</a>
+</header>
+
+<section class="page-hero">
+  <div class="crumb">मुख्यपृष्ठ / परिचय</div>
+  <h1>गुरुकुल परिवाराचा परिचय</h1>
+</section>
+<div class="garland"></div>
+
+<section>
+  <div class="founder-block">
+    <div class="founder-img"><img src="https://gurukulpariwar.in/img/uday_sir2.png" alt="श्री. उदय व्यंकटेश ठकार" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:8px;"></div>
+    <div class="founder-copy">
+      <div class="section-head" style="text-align:left;margin-bottom:0;">
+        <div class="tag">संस्थापक अध्यक्ष</div>
+        <h3>श्री. उदय व्यंकटेश ठकार</h3>
+      </div>
+      <p style="margin-top:14px;">1984 साली गुरुकुलच्या कार्याचा शुभारंभ झाला. प्रारंभी फक्त शालेय शिक्षणात कार्यरत असलेल्या गुरुकुलला स्वतःचं नाव 1995 मध्ये प्राप्त झालं. 1997 पासून गुरुकुल शिक्षणाबरोबरच सांस्कृतिक आणि सामाजिक क्षेत्रातही कार्यरत झाले.</p>
+      <p style="margin-top:14px;">आधी काम मग नाम हे तत्व अंगीकारून, गुरुकुलने आपल्या कार्यातून हे नाव सर्वार्थाने साकारण्याचा प्रयत्न केला आहे. गुरुकुलचे कार्य ही परंपरा अखंड चालत राहावी या विचाराने आम्ही कार्यरत आहोत — आपले गुरुकुल परिवारात मनःपूर्वक स्वागत 🙏</p>
+    </div>
+  </div>
+</section>
+
+<div class="garland"></div>
+
+<section class="pillars" style="background:var(--ivory-soft);">
+  <div class="section-head">
+    <div class="tag">कार्याचा प्रवास</div>
+    <h2>गुरुकुलची वाटचाल</h2>
+  </div>
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-yr">१९८४</div>
+      <div class="timeline-body"><p>गुरुकुलच्या कार्याचा शुभारंभ — प्रारंभी केवळ शालेय शिक्षण क्षेत्रात कार्यरत.</p></div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-yr">१९९५</div>
+      <div class="timeline-body"><p>गुरुकुलला स्वतःचं नाव प्राप्त झालं.</p></div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-yr">१९९७</div>
+      <div class="timeline-body"><p>शिक्षणाबरोबरच सांस्कृतिक आणि सामाजिक क्षेत्रात कार्याचा विस्तार. पुण्याच्या गणेश विसर्जन मिरवणुकीतील जिवंत देखाव्यांतून समाजप्रबोधनाचे पहिले पाऊल.</p></div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-yr">१९९८</div>
+      <div class="timeline-body"><p>गुरुकुलच्या नूतन वास्तूचा शुभारंभ १९ जून १९९८ रोजी ह.भ.प. किसन महाराज साखरे यांच्या शुभहस्ते संपन्न झाला.</p></div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-yr">२०००</div>
+      <div class="timeline-body"><p>परमपूजनीय गजानन महाराज प्रगटदिन महोत्सवाच्या माध्यमातून हिंदू संस्कृतीची माहिती समाजापर्यंत पोहोचवण्यास प्रारंभ.</p></div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-yr">२००५</div>
+      <div class="timeline-body"><p>गुरुकुल अभिनय शाळेचा प्रारंभ — रंगमंचावरील भीती दूर करणे व वक्तृत्व सुधारणे हा उद्देश.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="garland"></div>
+
+<section style="text-align:center;max-width:820px;margin:18px auto;">
+  <figure style="margin:0;">
+    <img src="https://gurukulpariwar.in/img/Gajanan_Maharaj1.jpg" alt="परमपूजनीय सद्गुरु श्री गजानन महाराज" loading="lazy" style="width:100%;max-width:460px;border-radius:10px;border:6px solid rgba(246,238,221,0.08);box-shadow:0 8px 24px rgba(0,0,0,0.12);display:block;margin:0 auto;">
+    <figcaption style="margin-top:12px;font-size:15px;color:var(--maroon-dark);line-height:1.5;">परमपूजनीय सद्गुरु श्री गजानन महाराज यांच्या पवित्र आशीर्वादाने गुरुकुलची परंपरा आणि संस्कार अखंड चालू राहो; विद्यार्थ्यांचे जीवन समृध्द व सुसंस्कृत व्हावे हीच आमची कामना.</figcaption>
+  </figure>
+</section>
+
+<section>
+  <div class="opening-block">
+    <div class="tag">स्मृती</div>
+    <p><b>परमपूजनीय सद्गुरु श्री गजानन महाराज</b> यांच्या आशीर्वादाने गुरुकुलची ही परंपरा अखंड चालू आहे. गुरुकुलच्या नूतन वास्तूचा शुभारंभ सुप्रसिद्ध वकील श्री सुनील राडकर व ह.भ.प. अजित कुलकर्णी यांच्या उपस्थितीत संपन्न झाला होता.</p>
+  </div>
+</section>
+
+<div class="garland light" style="background-color:var(--maroon-dark);"></div>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="logo-wrap" style="margin-bottom:14px;">
+        <div class="logo-mark">गु</div>
+        <div class="logo-text" style="color:var(--ivory);">गुरुकुल परिवार<span style="color:var(--turmeric);">GURUKUL PARIVAR · PUNE</span></div>
+      </div>
+      <p>श्रद्धा, प्रेम, आदर आणि विश्वास या मूल्यांवर आधारित गुरुकुल विद्यार्थ्यांच्या सर्वांगीण विकासासाठी कटिबद्ध आहे.</p>
+    </div>
+    <div>
+      <h5>पत्ता</h5>
+      <p>५५७, बुधवार पेठ,<br>अस्मिता अपार्टमेंट,<br>पुणे - ४११००२</p>
+    </div>
+    <div>
+      <h5>संपर्क</h5>
+      <ul>
+        <li>+91 98508 96493</li>
+        <li>gurukulpariwar1984@gmail.com</li>
+      </ul>
+    </div>
+    <div>
+      <h5>द्रुत दुवे</h5>
+      <ul>
+        <li><a href="index.html">मुख्यपृष्ठ</a></li>
+        <li><a href="about.html">परिचय</a></li>
+        <li><a href="events.html">उपक्रम</a></li>
+        <li><a href="contact.html">संपर्क</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>आमच्यासह जोडा</h5>
+      <div class="social-links">
+        <a href="https://www.facebook.com/profile.php?id=100006376236905" target="_blank" rel="noopener" title="Facebook">f</a>
+        <a href="https://www.instagram.com/pariwargurukul/" target="_blank" rel="noopener" title="Instagram">📷</a>
+        <a href="https://www.youtube.com/@gurukulpariwarpune5432" target="_blank" rel="noopener" title="YouTube">▶</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 गुरुकुल परिवार, पुणे</span>
+    <span>Facebook · Instagram · YouTube</span>
+  </div>
+</footer>
+
+  <script src="site.js"></script>
+</body>
+</html>
