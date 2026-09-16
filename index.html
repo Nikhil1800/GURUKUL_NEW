@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>गुरुकुल परिवार | Gurukul Parivar Pune</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Yatra+One&family=Tiro+Devanagari+Marathi:ital@0;1&family=Poppins:wght@300;400;500;600&family=Noto+Sans+Devanagari:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .hero{
+    position:relative;background:var(--maroon);color:var(--ivory);
+    padding:90px 6% 0;display:grid;grid-template-columns:1.1fr 0.9fr;
+    align-items:center;gap:40px;min-height:560px;overflow:hidden;
+  }
+  .hero::before{
+    content:"";position:absolute;inset:0;
+    background:
+      radial-gradient(circle at 85% 20%, rgba(217,142,43,0.18), transparent 45%),
+      radial-gradient(circle at 10% 80%, rgba(217,142,43,0.12), transparent 40%);
+  }
+  .hero-text{position:relative;z-index:2;padding-bottom:60px;}
+  .eyebrow{font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--turmeric);font-weight:600;margin-bottom:18px;}
+  .hero h1{font-family:'Tiro Devanagari Marathi',serif;font-size:clamp(30px,4.2vw,48px);line-height:1.35;margin-bottom:22px;max-width:620px;}
+  .hero p{font-size:15px;line-height:1.85;color:rgba(246,238,221,0.85);max-width:560px;margin-bottom:30px;}
+  .hero-actions{display:flex;gap:16px;}
+  .btn-outline{border:1px solid rgba(246,238,221,0.5);padding:12px 26px;border-radius:30px;font-size:14px;font-weight:500;transition:border-color .2s, background .2s;}
+  .btn-outline:hover{background:rgba(246,238,221,0.08);border-color:var(--ivory);}
+  .btn-solid{background:var(--turmeric);color:var(--maroon-dark);padding:12px 26px;border-radius:30px;font-size:14px;font-weight:600;}
+  .hero-portrait{position:relative;z-index:2;display:flex;justify-content:center;align-items:flex-end;height:100%;}
+  .portrait-frame{width:300px;aspect-ratio:3/4;border:6px solid var(--turmeric);border-radius:8px 8px 0 0;background:linear-gradient(180deg, rgba(217,142,43,0.25), rgba(92,26,27,0.4));display:flex;align-items:center;justify-content:center;color:rgba(246,238,221,0.6);font-size:13px;text-align:center;padding:20px;}
+
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);background:var(--ivory-soft);border-bottom:1px solid rgba(92,26,27,0.12);}
+  .stat{padding:36px 20px;text-align:center;border-right:1px solid rgba(92,26,27,0.12);}
+  .stat:last-child{border-right:none;}
+  .stat .num{font-family:'Tiro Devanagari Marathi',serif;font-size:34px;color:var(--maroon);font-weight:500;}
+  .stat .lbl{font-size:12.5px;color:var(--ink);opacity:0.7;margin-top:6px;letter-spacing:0.5px;}
+
+  .about-sec{display:grid;grid-template-columns:0.8fr 1.2fr;gap:56px;align-items:center;max-width:1140px;margin:0 auto;}
+  .about-img{aspect-ratio:4/5;border-radius:10px;background:linear-gradient(160deg, var(--maroon) 0%, var(--maroon-dark) 100%);display:flex;align-items:center;justify-content:center;color:var(--turmeric);font-size:13px;text-align:center;padding:24px;position:relative;}
+  .about-img::after{content:"";position:absolute;inset:14px;border:1px solid rgba(217,142,43,0.5);border-radius:6px;}
+  .about-copy p{font-size:15px;line-height:1.9;color:var(--ink);opacity:0.88;margin-bottom:18px;}
+  .signature-line{font-family:'Tiro Devanagari Marathi',serif;font-size:20px;color:var(--maroon);margin-top:18px;}
+  .signature-line span{display:block;font-size:13px;font-family:'Poppins',sans-serif;color:var(--sage);margin-top:4px;}
+
+  .pillars{background:var(--ivory-soft);}
+  .pillar-grid{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
+  .pillar{background:var(--ivory);border:1px solid rgba(92,26,27,0.14);border-radius:10px;padding:30px 22px;text-align:center;transition:transform .25s, border-color .25s;}
+  .pillar:hover{transform:translateY(-6px);border-color:var(--turmeric);}
+  .pillar .mark{width:48px;height:48px;border-radius:50%;background:var(--maroon);color:var(--turmeric);display:flex;align-items:center;justify-content:center;font-family:'Tiro Devanagari Marathi',serif;font-size:20px;margin:0 auto 16px;}
+  .pillar h3{font-family:'Tiro Devanagari Marathi',serif;font-size:18px;color:var(--maroon-dark);margin-bottom:8px;}
+  .pillar p{font-size:13px;color:var(--ink);opacity:0.7;line-height:1.6;}
+
+  .events-grid{max-width:1140px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
+  .event-card{border-radius:10px;overflow:hidden;border:1px solid rgba(92,26,27,0.14);background:var(--ivory-soft);}
+  .event-thumb{height:160px;background:linear-gradient(135deg, var(--maroon) 0%, #7a2426 100%);display:flex;align-items:center;justify-content:center;color:var(--turmeric);font-size:12px;text-align:center;padding:10px;}
+  .event-body{padding:20px 22px;}
+  .event-body .yr{font-size:12px;color:var(--sage);font-weight:600;letter-spacing:1px;}
+  .event-body h4{font-family:'Tiro Devanagari Marathi',serif;font-size:17px;color:var(--maroon-dark);margin:8px 0 10px;}
+  .event-body a{font-size:13px;color:var(--maroon);font-weight:500;}
+
+  .testi-wrap{background:var(--maroon);color:var(--ivory);}
+  .testi-grid{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
+  .testi-card{background:rgba(246,238,221,0.06);border:1px solid rgba(217,142,43,0.3);border-radius:10px;padding:28px 24px;}
+  .testi-card .quote-mark{color:var(--turmeric);font-size:30px;font-family:'Yatra One',serif;line-height:1;}
+  .testi-card p{font-size:13.5px;line-height:1.8;color:rgba(246,238,221,0.85);margin:14px 0 18px;}
+  .testi-card .who{font-size:13px;font-weight:600;color:var(--turmeric);}
+  .testi-card .role{font-size:11.5px;color:rgba(246,238,221,0.6);margin-top:2px;}
+  .testi-wrap .section-head h2{color:var(--ivory);}
+  .testi-wrap .section-head .tag{color:var(--turmeric);}
+
+  @media (max-width:900px){
+    .hero{grid-template-columns:1fr;padding-top:50px;}
+    .hero-portrait{display:none;}
+    .stats{grid-template-columns:repeat(2,1fr);}
+    .about-sec{grid-template-columns:1fr;}
+    .pillar-grid{grid-template-columns:repeat(2,1fr);}
+    .events-grid{grid-template-columns:1fr;}
+    .testi-grid{grid-template-columns:1fr;}
+    .footer-grid{grid-template-columns:1fr 1fr;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo-wrap">
+    <div class="logo-mark">गु</div>
+    <div class="logo-text">गुरुकुल परिवार<span>GURUKUL PARIVAR · PUNE</span></div>
+  </a>
+  <nav>
+    <a href="index.html" class="active">मुख्यपृष्ठ</a>
+    <a href="about.html">परिचय</a>
+    <a href="events.html">उपक्रम</a>
+    <a href="contact.html">संपर्क</a>
+  </nav>
+  <a href="contact.html" class="cta-btn">भेटीची वेळ</a>
+</header>
+
+<section class="hero">
+  <div class="hero-text">
+    <div class="eyebrow">४२ वर्षांची परंपरा · पुणे</div>
+    <h1>श्रद्धा, प्रेम, आदर आणि विश्वास<br>या मूल्यांवर घडणारं गुरुकुल</h1>
+    <p>विविध स्पर्धा आणि उपक्रमांच्या माध्यमातून विद्यार्थ्यांच्या सर्वांगीण विकासासाठी गुरुकुल परिवार गेल्या बेचाळीस वर्षांपासून कार्यरत आहे — आजचा विद्यार्थी हाच उद्याचा आदर्श नागरिक.</p>
+    <div class="hero-actions">
+      <a href="events.html" class="btn-solid">उपक्रम पहा</a>
+      <a href="about.html" class="btn-outline">अधिक जाणून घ्या</a>
+    </div>
+  </div>
+  <div class="hero-portrait">
+    <div class="portrait-frame"><img src="https://gurukulpariwar.in/img/1884_Opning_Photo.jpg" alt="संस्थापक" loading="lazy"></div>
+  </div>
+</section>
+<div class="garland"></div>
+
+<div class="stats">
+  <div class="stat"><div class="num">४२+</div><div class="lbl">वर्षांचा अनुभव</div></div>
+  <div class="stat"><div class="num">५,०००+</div><div class="lbl">माजी विद्यार्थी</div></div>
+  <div class="stat"><div class="num">१०,०००+</div><div class="lbl">सशक्त विद्यार्थी</div></div>
+  <div class="stat"><div class="num">२५+</div><div class="lbl">वार्षिक उपक्रम</div></div>
+</div>
+
+<section id="about">
+  <div class="about-sec">
+    <div class="about-img">संस्थापक छायाचित्र क्षेत्र</div>
+    <div class="about-copy">
+      <div class="section-head" style="text-align:left;margin-bottom:24px;">
+        <div class="tag">परिचय</div>
+        <h2>श्री. उदय व्यंकटेश ठकार</h2>
+      </div>
+      <p>प्रभू श्रीरामचंद्र आणि भगवान श्रीकृष्ण यांनी गुरुकुलात ज्ञानार्जन करून जसे आदर्श घडवले, तसेच विद्यार्थी घडवण्याचा आणि गुरुदेव रवींद्रनाथ टागोर यांना अपेक्षित मुक्त ज्ञानदान पद्धतीचा अवलंब करण्याचा वसा गुरुकुल परिवार गेल्या बेचाळीस वर्षांपासून चालवत आहे.</p>
+      <p>विद्यार्थी हा गुरुकुलचा केंद्रबिंदू आहे — कारण आजचे विद्यार्थी हेच भविष्यातील जबाबदार नागरिक आहेत.</p>
+      <div class="signature-line">संस्थापक अध्यक्ष<span>गुरुकुल परिवार, पुणे</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="garland"></div>
+
+<section class="pillars">
+  <div class="section-head">
+    <div class="tag">मूलतत्त्वे</div>
+    <h2>चार स्तंभांवर उभं असलेलं गुरुकुल</h2>
+  </div>
+  <div class="pillar-grid">
+    <div class="pillar"><div class="mark">श्र</div><h3>श्रद्धा</h3><p>परंपरा आणि मूल्यांवरचा अढळ विश्वास</p></div>
+    <div class="pillar"><div class="mark">प्रे</div><h3>प्रेम</h3><p>प्रत्येक विद्यार्थ्याकडे आपुलकीने पाहण्याची दृष्टी</p></div>
+    <div class="pillar"><div class="mark">आ</div><h3>आदर</h3><p>गुरु-शिष्य नात्यातला परस्पर सन्मान</p></div>
+    <div class="pillar"><div class="mark">वि</div><h3>विश्वास</h3><p>समाजात निर्माण होणारा दृढ विश्वास</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="section-head">
+    <div class="tag">उपक्रम</div>
+    <h2>स्पर्धा आणि वार्षिक सोहळे</h2>
+  </div>
+  <div class="events-grid">
+    <div class="event-card">
+      <div class="event-thumb">पुरस्कार प्रदान समारंभ</div>
+      <div class="event-body"><div class="yr">२०२५</div><h4>पुरस्कार प्रदान समारंभ</h4><a href="events.html">तपशील पहा →</a></div>
+    </div>
+    <div class="event-card">
+      <div class="event-thumb">विद्यार्थी कौतुक समारंभ</div>
+      <div class="event-body"><div class="yr">२०२५</div><h4>विद्यार्थी कौतुक समारंभ</h4><a href="events.html">तपशील पहा →</a></div>
+    </div>
+    <div class="event-card">
+      <div class="event-thumb">गजानन महाराज प्रगटदिन उत्सव</div>
+      <div class="event-body"><div class="yr">२०२५</div><h4>गजानन महाराज प्रगटदिन उत्सव</h4><a href="events.html">तपशील पहा →</a></div>
+    </div>
+  </div>
+  <div style="text-align:center;margin-top:36px;">
+    <a href="events.html" class="btn-solid" style="background:var(--maroon);color:var(--ivory);">सर्व उपक्रम पहा</a>
+  </div>
+</section>
+
+<div class="garland"></div>
+
+<section class="testi-wrap">
+  <div class="section-head">
+    <div class="tag">अभिप्राय</div>
+    <h2>मान्यवरांच्या शब्दांत गुरुकुल</h2>
+  </div>
+  <div class="testi-grid">
+    <div class="testi-card">
+      <div class="quote-mark">“</div>
+      <p>गुरुकुलचं कार्य वाळवंटातल्या ओॲसिस सारखं आहे. उत्तम परंपरा सांभाळण्याचे कार्य गुरुकुल करत आहे.</p>
+      <div class="who">महेश सूर्यवंशी</div>
+      <div class="role">कोषाध्यक्ष, श्रीमंत दगडूशेठ हलवाई गणपती ट्रस्ट</div>
+    </div>
+    <div class="testi-card">
+      <div class="quote-mark">“</div>
+      <p>संत साहित्यासारखे महत्त्वपूर्ण कार्य गुरुकुलच्या विविध उपक्रमांतून घडत आहे.</p>
+      <div class="who">डॉ. भावार्थ देखणे</div>
+      <div class="role">साहित्यिक</div>
+    </div>
+    <div class="testi-card">
+      <div class="quote-mark">“</div>
+      <p>गुरुकुलचं सातत्य हे त्यांच्या यशाचे मुख्य कारण आहे — सद्गुरु गजानन महाराजांच्या आशीर्वादाने.</p>
+      <div class="who">उदय लेले</div>
+      <div class="role">संचालक, कॉसमॉस बँक</div>
+    </div>
+  </div>
+</section>
+
+<div class="garland light" style="background-color:var(--maroon-dark);"></div>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="logo-wrap" style="margin-bottom:14px;">
+        <div class="logo-mark">गु</div>
+        <div class="logo-text" style="color:var(--ivory);">गुरुकुल परिवार<span style="color:var(--turmeric);">GURUKUL PARIVAR · PUNE</span></div>
+      </div>
+      <p>श्रद्धा, प्रेम, आदर आणि विश्वास या मूल्यांवर आधारित गुरुकुल विद्यार्थ्यांच्या सर्वांगीण विकासासाठी कटिबद्ध आहे.</p>
+    </div>
+    <div>
+      <h5>पत्ता</h5>
+      <p>५५७, बुधवार पेठ,<br>अस्मिता अपार्टमेंट,<br>पुणे - ४११००२</p>
+    </div>
+    <div>
+      <h5>संपर्क</h5>
+      <ul>
+        <li>+91 98508 96493</li>
+        <li>gurukulpariwar1984@gmail.com</li>
+      </ul>
+    </div>
+    <div>
+      <h5>द्रुत दुवे</h5>
+      <ul>
+        <li><a href="index.html">मुख्यपृष्ठ</a></li>
+        <li><a href="about.html">परिचय</a></li>
+        <li><a href="events.html">उपक्रम</a></li>
+        <li><a href="contact.html">संपर्क</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>आमच्यासह जोडा</h5>
+      <div class="social-links">
+        <a href="https://www.facebook.com/profile.php?id=100006376236905" target="_blank" rel="noopener" title="Facebook">f</a>
+        <a href="https://www.instagram.com/pariwargurukul/" target="_blank" rel="noopener" title="Instagram">📷</a>
+        <a href="https://www.youtube.com/@gurukulpariwarpune5432" target="_blank" rel="noopener" title="YouTube">▶</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 गुरुकुल परिवार, पुणे</span>
+    <span>Facebook · Instagram · YouTube</span>
+  </div>
+</footer>
+
+  <script src="site.js"></script>
+</body>
+</html>
